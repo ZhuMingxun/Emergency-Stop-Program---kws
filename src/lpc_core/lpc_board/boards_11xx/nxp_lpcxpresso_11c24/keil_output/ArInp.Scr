@@ -1,0 +1,3 @@
+--create .\keil_output\board_nxp_lpcxpresso_11c24.lib
+.\keil_output\board_sysinit.o
+.\keil_output\board.o

@@ -1,0 +1,65 @@
+Dependencies for Project 'lib_lpc_board_nxp_lpcxpresso_11c24', Target 'nxp_lpcxpresso_11c24': (DO NOT MODIFY !)
+F (.\board_sysinit.c)(0x52301AB8)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork --split_sections -I..\..\..\..\CMSIS -I..\..\..\lpc_chip\chip_11xx -I..\..\..\lpc_chip\chip_common -I..\..\..\lpc_chip\chip_11xx\config_11cxx -I..\nxp_lpcxpresso_11c24 -I..\..\board_common-I D:\R&D\GY004\newBS\software_KGV5\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="517" -D_RTE_ -DCORE_M0-o .\keil_output\board_sysinit.o --omf_browse .\keil_output\board_sysinit.crf --depend .\keil_output\board_sysinit.d)
+I (board.h)(0x59014A86)
+I (..\..\..\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\..\..\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB2B76)
+I (..\..\..\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\..\..\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\..\..\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x589A7FEC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589A7FEC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589A7FEC)
+I (..\..\..\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\..\..\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\..\..\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\..\..\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\..\..\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\..\..\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\..\..\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\..\..\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\..\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (.\board.c)(0x52301AB8)(-c --cpu Cortex-M0 -g -O3 --apcs=interwork --split_sections -I..\..\..\..\CMSIS -I..\..\..\lpc_chip\chip_11xx -I..\..\..\lpc_chip\chip_common -I..\..\..\lpc_chip\chip_11xx\config_11cxx -I..\nxp_lpcxpresso_11c24 -I..\..\board_common-I D:\R&D\GY004\newBS\software_KGV5\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="517" -D_RTE_ -DCORE_M0-o .\keil_output\board.o --omf_browse .\keil_output\board.crf --depend .\keil_output\board.d)
+I (board.h)(0x59014A86)
+I (..\..\..\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\..\..\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB2B76)
+I (..\..\..\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\..\..\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\..\..\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x589A7FEC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x589A7FEC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x589A7FEC)
+I (..\..\..\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\..\..\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\..\..\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\..\..\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\..\..\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\..\..\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\..\..\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\..\..\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\..\..\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\..\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\board_common\retarget.h)(0x521AB4FE)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x55DB2B78)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
