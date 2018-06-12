@@ -98,7 +98,10 @@ extern char  AMBEGetRdStatus(void);	//AMBE-1000判断是否可以读取
 extern void  AMBESetSine(void);			//AMBE-1000产生打点信号
 extern void  AMBESetWake(void);			//AMBE-1000进入唤醒模式
 extern void  AMBESetSleep(void);		//AMBE-1000进入休眠模式
+extern void  AMBEReset(void);
+extern void  AMBESetMute(void);
+extern void  AMBESetGain(void);
 extern char FrameRdData[34];
 extern char FrameWrData[34];
-
+extern uint16_t waitcnt;
 #endif 

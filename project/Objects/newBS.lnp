@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\system.o"
+".\objects\ambe.o"
+".\objects\speak.o"
+".\objects\can.o"
+".\objects\dataio.o"
+".\objects\t16b0.o"
+".\objects\adc.o"
+".\objects\at24c16.o"
+".\objects\bspiapdriver.o"
+".\objects\watchdog.o"
+".\objects\sysinit.o"
+".\objects\keil_startup_lpc11xx.o"
+"..\src\lpc_core\lpc_chip\chip_11xx\keil_output\chip_11cxx_lib\chip_11cxx_lib.lib"
+"..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\keil_output\board_nxp_lpcxpresso_11c24.lib"
+--strict --scatter ".\Objects\newBS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\newBS.map" -o .\Objects\newBS.axf

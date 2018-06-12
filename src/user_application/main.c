@@ -61,6 +61,10 @@ bool is_YY_Init;//扩音电话初始化标志。上电延时后初始化，希望用于解决ambe1000上电
 /*********************增加定义的变量 - 2018.5.25 - zhumx ***************************/
 uint8_t g_d18_onlinetime_cnt;//沿线得电时间计数器，1Hz自增
 bool g_battsupply_enable = false;//电池供电使能
+#define D18V_STAT_ON    1
+#define D18V_STAT_OFF   2
+uint8_t d18v_stat=D18V_STAT_ON;
+
 /***********************************************************************************/
 	
 	
@@ -277,12 +281,16 @@ Mute_ON();    //功放关闭，静音
 		ADC_value=ADC_IRQ_Value_final;
 
 	}
-if ((((float)ADC_IRQ_Value_final)/1024)*3.3*4>2.0)
-{
-	is_YY_Alive=true;		
-}
-else
-	is_YY_Alive=false;
+    
+    if ((((float)ADC_IRQ_Value_final)/1024)*3.3*4>2.0)
+    {
+        is_YY_Alive=true;		
+    }
+    else
+    {
+        is_YY_Alive=false;
+        is_YY_Init = false;
+    }
 
 		//处理急停按键
 	if (flag_10ms==1)
@@ -812,7 +820,7 @@ else
 						//播放打点 
 						//while (!AMBEGetWrStatus());//等待ambe1000可以被写操作
 						AMBESetSine();        //本机打点发声	
-								
+						DEBUGOUT("\r\nAMBESetSine()finished!\r\n");		
 						
 						
 					}//播放打点
@@ -900,6 +908,7 @@ else
 			//检测18V掉线。
 			if (flag_18ON==1)
 			{
+                //d18v_stat = D18V_STAT_OFF;
                 JDQ_State_Open();//继电器吸合，断开下一级供电
                 px_flag=0;
                 D18V_LOST_FAST_count=50;//20ms进入一次，等18V电力恢复后，延时1000ms再重新排序
@@ -907,10 +916,11 @@ else
 			}
 			else
 			{
+                //d18v_stat = D18V_STAT_ON;
 				#if DEBUG_UART_C
 				flag_18off=0;
 				#endif
-				if (D18V_LOST_FAST_count>0)
+				if(D18V_LOST_FAST_count>0)
 					D18V_LOST_FAST_count--;
 			}
 			
@@ -931,12 +941,12 @@ else
 				LPC_CCAN_API->config_rxmsgobj(&msg_obj);
 			}
 
-			#if NEW_BS
-			//if((can_sound_flag==false)&&(key1_flag==false)&&(key2_flag==false))	
+			#if NEW_BS	
+            
+            switch(d18v_stat)
 			{
-				if (flag_18ON==0)
-                /*********************************沿线18V在线处理*************************************/
-				{
+                case D18V_STAT_ON:
+                {
 					//沿线18V电压在，没有断电
 					D18V_Lost_count=0;//将电池断电计数器清零
 					
@@ -945,59 +955,50 @@ else
 						D18V_IN_count++;
 					}
 					g_d18_onlinetime_cnt = D18V_IN_count;
-					
-					//if(D18V_IN_flag==true)
-					{
-                        if (is_YY_Alive==true && is_YY_Init==false)
-                        {
-                            AMBEInit();		
-                            Mute_ON();
-                            is_YY_Init=true;
-                        }
-							
-						if (is_YY_Alive==true)
-							msg.data[0]|=0x10;
-						else
-							msg.data[0]&=0xef;
-			
-						if (px_flag==0)
-						{
-							JDQ_State_Open();							
-						}
-						else
-						{
-							JDQ_State_Close();//继电器吸合，给下一级供电							
-							msg.data[0]|=0x08;					
-							
-						}
-						if (heart_flag==true)
-						{
-							can_data_send(px_flag,&(msg.data[0]));
-
-						}
-					}//if ((D18V_IN_flag==true)&&(heart_flag==true))
-//					else
-//					{
-//						//can 18V电压检测到
-//											
-//						if (g_d18_onlinetime_cnt>=3)
-//						{							
-//							D18V_IN_flag=true;								
-//							
-//						}
-//						
-//					}//if ((D18V_IN_flag==true)&&(heart_flag==true)) else
-//					if ((px_flag==1)&&(D18V_IN_count<=10))
-//						D18V_IN_count++;
-				}//if (D18V_State()==0) 沿线18V没有掉电
-				else
-                /*************************************沿线18V掉线处理 start *************************************************/
-				{
-                    px_flag=0;
-                    heart_flag=true;//2018.5.25 zhumx
-                    //D18V_IN_flag = false;
-                    D18V_IN_count = 0;
-
+                    
+                    if (is_YY_Alive==true && is_YY_Init==false)
+                    {
+                        AMBEInit();		
+                        Mute_ON();
+                        is_YY_Init=true;
+                    }
+                    
+                    if (is_YY_Alive==true)
+                        msg.data[0]|=0x10;
+                    else
+                        msg.data[0]&=0xef;
+        
+                    if (px_flag==0)
+                    {
+                        JDQ_State_Open();							
+                    }
+                    else
+                    {
+                        JDQ_State_Close();//继电器吸合，给下一级供电							
+                        msg.data[0]|=0x08;					
+                        
+                    }
+                    if (heart_flag==true)
+                    {
+                        can_data_send(px_flag,&(msg.data[0]));
+                    }
+                    
+                    if (flag_18ON==1)//18V 掉线
+                    {
+                        px_flag=0;
+                        heart_flag=true;//2018.5.25 zhumx
+                        D18V_IN_count = 0;
+                        AMBEReset();
+                        AMBESetGain();
+                        d18v_stat =  D18V_STAT_OFF;                       
+                    }
+                    break;
+                }
+                
+                case D18V_STAT_OFF:
+                {
+                    /*************************************沿线18V掉线处理 start *************************************************/ 
+                    
                     if(g_d18_onlinetime_cnt>10)
                     {
                         g_battsupply_enable = true;
@@ -1014,10 +1015,23 @@ else
                     {
                         //POWEROFF_State_Close();
                     }
+                    
+                    if (flag_18ON==0)//18V 上电
+                    {
+                        AMBEReset();
+                        AMBESetGain();
+                        d18v_stat =  D18V_STAT_ON;  
+                    }
+                    /*************************************沿线18V掉线处理end*************************************************/
+                    break;
                 }
-                /*************************************沿线18V掉线处理end*************************************************/
-				
-			}//if((can_sound_flag==false)&&(key1_flag==false)&&(key2_flag==false))
+                
+                default:
+                {
+                    d18v_stat = D18V_STAT_ON;
+                    break;
+                }
+            }
 			#endif
 
 		}//if(flag_1500ms == 1)   //1500ms定时到，定时发送
@@ -1106,10 +1120,12 @@ void SysTick_Handler(void)
 	RStau = SysTick->CTRL ;			//清计时器
 //	DEBUGOUT("1+\r\n");
 	DEBUGOUT("\r\n px_flag==%d, flag_18ON==%d, CAN_ID==%x, can_send_flag==%d, is_YY_Init==%d, is_YY_Alive==%d, ",px_flag,flag_18ON,CAN_ID,can_send_flag,is_YY_Init,is_YY_Alive);//打印px_flag，CAN_ID，flag_18ON
-	//DEBUGOUT("can_sound_flag==%d, mute_flag==%d",can_sound_flag,mute_flag);
-	DEBUGOUT("heart_flag==%d, key1_flag==%d, key2_flag==%d, can_sound_flag==%d, ",heart_flag,key1_flag,key2_flag,can_sound_flag);
-	DEBUGOUT("D18V_IN_flag==%d, D18V_IN_count==%d",D18V_IN_flag,D18V_IN_count);
- //	SoftTimerService();	
+	DEBUGOUT("can_sound_flag==%d, mute_flag==%d",can_sound_flag,mute_flag);
+	//DEBUGOUT("heart_flag==%d, key1_flag==%d, key2_flag==%d, can_sound_flag==%d, ",heart_flag,key1_flag,key2_flag,can_sound_flag);
+	DEBUGOUT("D18V_IN_flag==%d, D18V_IN_count==%d, waitcnt==%d",D18V_IN_flag,D18V_IN_count,waitcnt);
+    DEBUGOUT("\r\n 15:34");
+    
+    //	SoftTimerService();	
 	if ((watchdog_feed_flag==true)&&(can_send_flag==false))
 	{
 		watchdog_feed_flag=false;

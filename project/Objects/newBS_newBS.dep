@@ -1,0 +1,320 @@
+Dependencies for Project 'newBS', Target 'newBS': (DO NOT MODIFY !)
+F (..\src\user_application\main.c)(0x5B1E2622)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\src\device\cari_config.h)(0x5AFAAEC9)
+I (..\src\user_system\user_config.h)(0x59798FAB)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\src\user_system\soft_timer.h)(0x56DE9A54)
+I (..\src\user_system\message.h)(0x570C975A)
+I (..\src\device\can.h)(0x5AEFB135)
+I (..\src\device\AT24C16.h)(0x58FB0CE2)
+I (..\src\device\adc.h)(0x59770A27)
+I (..\src\device\dataio.h)(0x5AED543C)
+I (..\src\device\ambe.h)(0x5B1E249A)
+I (..\src\device\t16b0.h)(0x5AF02CAF)
+I (..\src\device\speak.h)(0x5AFD1855)
+I (..\src\device\BspIapDriver.h)(0x59004AA7)
+I (..\src\device\watchDog.h)(0x5910478F)
+F (..\src\user_system\system.c)(0x56DE8BBA)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\system.o --omf_browse .\objects\system.crf --depend .\objects\system.d)
+I (..\src\user_system\system.h)(0x56DE8EF0)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+F (..\src\device\ambe.c)(0x5B1A3FB7)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\ambe.o --omf_browse .\objects\ambe.crf --depend .\objects\ambe.d)
+I (..\src\device\ambe.h)(0x5B1E249A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+F (..\src\device\speak.c)(0x5B07C1AF)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\speak.o --omf_browse .\objects\speak.crf --depend .\objects\speak.d)
+I (..\src\device\speak.h)(0x5AFD1855)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\device\cari_config.h)(0x5AFAAEC9)
+I (..\src\device\can.h)(0x5AEFB135)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\src\device\ambe.h)(0x5B1E249A)
+I (..\src\device\adc.h)(0x59770A27)
+F (..\src\device\can.c)(0x5B07B119)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\can.o --omf_browse .\objects\can.crf --depend .\objects\can.d)
+I (..\src\device\can.h)(0x5AEFB135)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\src\device\ambe.h)(0x5B1E249A)
+I (..\src\device\dataio.h)(0x5AED543C)
+I (..\src\device\cari_config.h)(0x5AFAAEC9)
+I (..\src\device\speak.h)(0x5AFD1855)
+I (..\src\device\adc.h)(0x59770A27)
+I (..\src\device\t16b0.h)(0x5AF02CAF)
+I (..\src\device\AT24C16.h)(0x58FB0CE2)
+I (..\src\device\watchDog.h)(0x5910478F)
+F (..\src\device\dataio.c)(0x5B0CC81B)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\dataio.o --omf_browse .\objects\dataio.crf --depend .\objects\dataio.d)
+I (..\src\device\dataio.h)(0x5AED543C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\device\cari_config.h)(0x5AFAAEC9)
+I (..\src\device\can.h)(0x5AEFB135)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\src\device\t16b0.h)(0x5AF02CAF)
+F (..\src\device\t16b0.c)(0x5B03BCA3)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\t16b0.o --omf_browse .\objects\t16b0.crf --depend .\objects\t16b0.d)
+I (..\src\lpc_core\lpc_chip\chip_11xx\lpc11xx.h)(0x4FF4FDF8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\system_LPC11xx.h)(0x4CF35218)
+I (..\src\device\t16b0.h)(0x5AF02CAF)
+F (..\src\device\adc.c)(0x5AED29F1)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\src\device\cari_config.h)(0x5AFAAEC9)
+F (..\src\device\AT24C16.c)(0x5AFE30FB)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\at24c16.o --omf_browse .\objects\at24c16.crf --depend .\objects\at24c16.d)
+I (..\src\device\AT24C16.h)(0x58FB0CE2)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+F (..\src\device\BspIapDriver.c)(0x591711C3)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\bspiapdriver.o --omf_browse .\objects\bspiapdriver.crf --depend .\objects\bspiapdriver.d)
+I (..\src\device\BspIapDriver.h)(0x59004AA7)
+I (..\src\lpc_core\lpc_chip\chip_11xx\system_LPC11xx.h)(0x4CF35218)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+F (..\src\device\watchDog.c)(0x5916C59F)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\watchdog.o --omf_browse .\objects\watchdog.crf --depend .\objects\watchdog.d)
+I (..\src\device\watchDog.h)(0x5910478F)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+F (..\src\startup_code\sysinit.c)(0x522DF14C)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_common -I ..\src\lpc_core\lpc_chip\chip_11xx -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx -I ..\src\CMSIS -I ..\src\lpc_core\lpc_board\board_common -I ..\src\user_system -I ..\src\device-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-D__UVISION_VERSION="523" -D_RTE_ -DCORE_M0-o .\objects\sysinit.o --omf_browse .\objects\sysinit.crf --depend .\objects\sysinit.d)
+I (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h)(0x597707C9)
+I (..\src\lpc_core\lpc_chip\chip_11xx\chip.h)(0x58D20FE6)
+I (..\src\lpc_core\lpc_chip\chip_common\lpc_types.h)(0x56DE6D12)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\sys_config.h)(0x56E3DE58)
+I (..\src\lpc_core\lpc_chip\chip_11xx\cmsis.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx\cmsis_11cxx.h)(0x58EB3321)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\src\lpc_core\lpc_chip\chip_11xx\pmu_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_11xx\fmc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\sysctl_11xx.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\clock_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\iocon_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\timer_11xx.h)(0x521EBCF4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\uart_11xx.h)(0x52329088)
+I (..\src\lpc_core\lpc_chip\chip_common\ring_buffer.h)(0x521C69F4)
+I (..\src\lpc_core\lpc_chip\chip_11xx\wwdt_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ssp_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\romapi_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_common\error.h)(0x52301AB8)
+I (..\src\lpc_core\lpc_chip\chip_11xx\adc_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\gpio_11xx_2.h)(0x522DF14C)
+I (..\src\lpc_core\lpc_chip\chip_11xx\i2c_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h)(0x521AB500)
+I (..\src\lpc_core\lpc_board\board_common\board_api.h)(0x52301AB6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+F (..\src\startup_code\keil_startup_lpc11xx.s)(0x5AEFE4CE)(--cpu Cortex-M0 -g --apcs=interwork -I ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24 -I ..\src\lpc_core\lpc_chip\chip_11xx\config_11cxx --cpreproc-I.\RTE\_newBS-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "NO_CRP SETA 1"--list .\listings\keil_startup_lpc11xx.lst --xref -o .\objects\keil_startup_lpc11xx.o --depend .\objects\keil_startup_lpc11xx.d)
+F (..\src\lpc_core\lpc_chip\chip_11xx\keil_output\chip_11cxx_lib\chip_11cxx_lib.lib)(0x56E1952A)()
+F (..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\keil_output\board_nxp_lpcxpresso_11c24.lib)(0x59014A87)()
+F (..\doc\AT24C16¥Ê¥¢ø’º‰∑÷≈‰.txt)(0x591D8160)()
+F (..\doc\log.txt)(0x591E8E71)()
+F (..\doc\kws.txt)(0x5AF11BA0)()
