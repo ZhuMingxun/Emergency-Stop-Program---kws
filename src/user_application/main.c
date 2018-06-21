@@ -224,7 +224,7 @@ int main(void)
 //	while(flag_1000ms==0){}//延时500ms
 	
 	#if NEW_BS
-Mute_ON();    //功放关闭，静音			
+    Mute_ON();    //功放关闭，静音			
 //		if ((key2_flag==false)||(can_sound_flag==false))//key2_flag：打点按下
 //	{
 //			msg.data[1]=ADC_IRQ_Value_final%256;
