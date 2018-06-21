@@ -29,11 +29,3 @@
 .\objects\can.o: ..\src\lpc_core\lpc_chip\chip_11xx\ccand_11xx.h
 .\objects\can.o: ..\src\lpc_core\lpc_board\board_common\board_api.h
 .\objects\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\can.o: ..\src\device\ambe.h
-.\objects\can.o: ..\src\device\dataio.h
-.\objects\can.o: ..\src\device\cari_config.h
-.\objects\can.o: ..\src\device\speak.h
-.\objects\can.o: ..\src\device\adc.h
-.\objects\can.o: ..\src\device\t16b0.h
-.\objects\can.o: ..\src\device\AT24C16.h
-.\objects\can.o: ..\src\device\watchDog.h

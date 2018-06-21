@@ -106,10 +106,6 @@ const char WAKE_DATA[34]={
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 0x00,0x00,0x00,0x00,0x00,0x00};
 
-
-uint16_t waitcnt=0;
-
-
 void  AMBEReset(void);
 void  AMBESetMute(void);
 void  AMBESetGain(void);
@@ -232,11 +228,11 @@ void AMBEWrData(char*pdata)
 {
 	uint8_t i;
 	
-	uint16_t waitcnt1=0;
+	uint16_t waitcnt=0;
 	
 	while (!AMBEGetWrStatus())
 	{
-		if(waitcnt1++ > 65530)
+		if(waitcnt++ > 65530)
 			return;
 	}
 	
@@ -268,7 +264,7 @@ char AMBEGetRdStatus(void)
 void AMBESetSine(void)
 {
   uint8_t i;
-  waitcnt = 0;
+	uint16_t waitcnt=0;
 	
 	while (!AMBEGetWrStatus())
 	{

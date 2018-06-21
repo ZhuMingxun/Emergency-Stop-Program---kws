@@ -31,5 +31,3 @@
 .\objects\speak.o: ..\src\lpc_core\lpc_board\boards_11xx\nxp_lpcxpresso_11c24\board.h
 .\objects\speak.o: ..\src\lpc_core\lpc_board\board_common\board_api.h
 .\objects\speak.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\speak.o: ..\src\device\ambe.h
-.\objects\speak.o: ..\src\device\adc.h
