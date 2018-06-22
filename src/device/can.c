@@ -387,6 +387,7 @@ void can_rcv(CCAN_MSG_OBJ_T can_rcv_dat)
 		CAN_RD_ID = CAN_RD_Message.mode_id & ((uint16_t)0x3<<9);
 		if (CAN_RD_ID==ID10_09_OrderToBSM)
 		{
+            DEBUGOUT("\r\n rcv ID10_09_OrderToBSM");
 			//主机配置命令
 			//广播类型命令
 			
@@ -405,7 +406,9 @@ void can_rcv(CCAN_MSG_OBJ_T can_rcv_dat)
 				{
 					uint32_t chip;
 					chip=CAN_RD_Message.data[2]+(uint32_t)(CAN_RD_Message.data[3]<<8)+(uint32_t)(CAN_RD_Message.data[4]<<16)+(uint32_t)(CAN_RD_Message.data[5]<<24);
-					if (chip==0)
+					
+                    DEBUGOUT("\r\n px_flag=0 rcv 2a ff");
+                    if (chip==0)
 					{
 						if((CAN_RD_Message.data[6] >= 1)&&(CAN_RD_Message.data[6] <= 60))   //ID控制在1-60之间
 						{
@@ -563,26 +566,21 @@ void can_rcv(CCAN_MSG_OBJ_T can_rcv_dat)
 		if (CAN_RD_ID==ID08_07_Soundcodes)
 		{
 			uint8_t tmpi;
-			//CAN_RD_ID = CAN_RD_ID>>7;
 			CAN_RD_ID1=CAN_RD_Message.mode_id&0x7f;
-			//if((CAN_RD_ID == 0X03)&&(CAN_RD_ID1!=CAN_ID))   //如果是语音类型
-//			if(CAN_RD_ID1!=CAN_ID)
-//			{
-				
-				can_sound_time=0;
-				#if NEW_BS
-				for (tmpi=0;tmpi<8;tmpi++)
-				{
-					can_sound_buf[tmpi]=CAN_RD_Message.data[tmpi];//取数据
-					//can_sound_buf_count++;
-				}
-				#endif
-				can_sound_flag=true;//收到语音数据帧
-				flag_5s=0;
-				flag_5s_count=0;
-				return;
+
+			
+			can_sound_time=0;
+			#if NEW_BS
+			for (tmpi=0;tmpi<8;tmpi++)
+			{
+				can_sound_buf[tmpi]=CAN_RD_Message.data[tmpi];//取数据
+			}
+			#endif
+			can_sound_flag=true;//收到语音数据帧
+			flag_5s=0;
+			flag_5s_count=0;
+			return;
 					
-//			}//if(CAN_RD_ID == 0X03)   //如果是语音类型
 		}
 		
 //////////////////////////////////////////////////////////////	

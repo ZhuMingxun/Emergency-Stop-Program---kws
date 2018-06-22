@@ -63,7 +63,7 @@ uint8_t g_d18_onlinetime_cnt;//沿线得电时间计数器，1Hz自增
 bool g_battsupply_enable = false;//电池供电使能
 #define D18V_STAT_ON    1
 #define D18V_STAT_OFF   2
-uint8_t d18v_stat=D18V_STAT_ON;
+uint8_t d18v_stat=D18V_STAT_OFF;
 
 /***********************************************************************************/
 	
@@ -71,9 +71,6 @@ uint8_t d18v_stat=D18V_STAT_ON;
 	
 int main(void)
 {	
-	//char *p;
-	
-
 	uint8_t key_count;		 //按键次数统计变量,用于分析是不是有人在这儿操作，进一步实现在电力不够的情况下降低播放功耗
 
 	bool jt_flag; //急停按键标志
@@ -225,19 +222,6 @@ int main(void)
 	
 	#if NEW_BS
     Mute_ON();    //功放关闭，静音			
-//		if ((key2_flag==false)||(can_sound_flag==false))//key2_flag：打点按下
-//	{
-//			msg.data[1]=ADC_IRQ_Value_final%256;
-//			msg.data[0]&=0x3f;//清除msg.data[0]的最高两位
-//			msg.data[0]|=(((ADC_IRQ_Value_final-msg.data[1])>>2)&0xc0);
-//			if ((ADC_IRQ_Value_final/1024)*3.3*4>2.0)
-//			{
-//				is_YY_Alive=true;		
-//				Mute_ON();    //功放关闭，静音			
-//			}
-//			else
-//				is_YY_Alive=false;
-//	}//此处的判断扩音电话是否存在的标志放到主循环中，孔维社，2017.7.30
 	
 	#if ENABLE_AT24C16
 	if (AT24C16_Check()==0)
@@ -267,30 +251,31 @@ int main(void)
 	ADC_value=ADC_IRQ_Value_final;
 	
 	while (1) 
-	{	
-		watchdog_feed_flag=true;
-		flag_18ON=D18V_State();	
-	//Chip_WWDT_Feed(LPC_WWDT);
-	//	while (1);
-	/*判断是否有语音*/
-	if ((key2_flag==true)||(can_sound_flag==true))//打点按下或有语音播放时采集电池电压
 	{
-		msg.data[1]=ADC_IRQ_Value_final%256;
-		msg.data[0]&=0x3f;//清除msg.data[0]的最高两位
-		msg.data[0]|=(((ADC_IRQ_Value_final-msg.data[1])>>2)&0xc0);
-		ADC_value=ADC_IRQ_Value_final;
+        DEBUGOUT("\r\n run While(1) !");        
+		watchdog_feed_flag = true;
+        
+		flag_18ON = D18V_State();	
 
-	}
-    
-    if ((((float)ADC_IRQ_Value_final)/1024)*3.3*4>2.0)
-    {
-        is_YY_Alive=true;		
-    }
-    else
-    {
-        is_YY_Alive=false;
-        is_YY_Init = false;
-    }
+        /*判断是否有语音*/
+        if ((key2_flag==true)||(can_sound_flag==true))//打点按下或有语音播放时采集电池电压
+        {
+            msg.data[1]=ADC_IRQ_Value_final%256;
+            msg.data[0]&=0x3f;//清除msg.data[0]的最高两位
+            msg.data[0]|=(((ADC_IRQ_Value_final-msg.data[1])>>2)&0xc0);
+            ADC_value=ADC_IRQ_Value_final;
+
+        }
+        
+        if ((((float)ADC_IRQ_Value_final)/1024)*3.3*4>2.0)
+        {
+            is_YY_Alive=true;		
+        }
+        else
+        {
+            is_YY_Alive=false;
+            is_YY_Init = false;
+        }
 
 		//处理急停按键
 	if (flag_10ms==1)
@@ -929,6 +914,7 @@ int main(void)
 		}//20ms
 		if(flag_1500ms == 1)   //flag_1500ms：1s定时标志，定时发送
 		{
+            DEBUGOUT("\r\n run 1Hz task !");
 			//每秒发送一次心跳
 			flag_1500ms = 0;
 			if(can_rev_monitor_flag==true)
@@ -978,8 +964,11 @@ int main(void)
                         msg.data[0]|=0x08;					
                         
                     }
+                    
+                    DEBUGOUT("\r\n heart_flag==%d ",heart_flag);
                     if (heart_flag==true)
                     {
+                        DEBUGOUT("\r\n send heartbeat ");
                         can_data_send(px_flag,&(msg.data[0]));
                     }
                     
@@ -1018,8 +1007,11 @@ int main(void)
                     
                     if (flag_18ON==0)//18V 上电
                     {
-                        AMBEReset();
-                        AMBESetGain();
+                        if(is_YY_Alive==true)
+                        {
+                            AMBEInit();		
+                            Mute_ON();
+                        }
                         d18v_stat =  D18V_STAT_ON;  
                     }
                     /*************************************沿线18V掉线处理end*************************************************/
@@ -1120,10 +1112,10 @@ void SysTick_Handler(void)
 	RStau = SysTick->CTRL ;			//清计时器
 //	DEBUGOUT("1+\r\n");
 	DEBUGOUT("\r\n px_flag==%d, flag_18ON==%d, CAN_ID==%x, can_send_flag==%d, is_YY_Init==%d, is_YY_Alive==%d, ",px_flag,flag_18ON,CAN_ID,can_send_flag,is_YY_Init,is_YY_Alive);//打印px_flag，CAN_ID，flag_18ON
-	DEBUGOUT("can_sound_flag==%d, mute_flag==%d",can_sound_flag,mute_flag);
+	//DEBUGOUT("can_sound_flag==%d, mute_flag==%d",can_sound_flag,mute_flag);
 	//DEBUGOUT("heart_flag==%d, key1_flag==%d, key2_flag==%d, can_sound_flag==%d, ",heart_flag,key1_flag,key2_flag,can_sound_flag);
-	DEBUGOUT("D18V_IN_flag==%d, D18V_IN_count==%d, waitcnt==%d",D18V_IN_flag,D18V_IN_count,waitcnt);
-    DEBUGOUT("\r\n 15:34");
+	//DEBUGOUT("D18V_IN_flag==%d, D18V_IN_count==%d, waitcnt==%d",D18V_IN_flag,D18V_IN_count,waitcnt);
+    DEBUGOUT("\r\n 2018-6-22");
     
     //	SoftTimerService();	
 	if ((watchdog_feed_flag==true)&&(can_send_flag==false))

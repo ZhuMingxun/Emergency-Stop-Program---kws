@@ -36,3 +36,8 @@
 .\objects\main.o: ..\src\device\AT24C16.h
 .\objects\main.o: ..\src\device\adc.h
 .\objects\main.o: ..\src\device\dataio.h
+.\objects\main.o: ..\src\device\ambe.h
+.\objects\main.o: ..\src\device\t16b0.h
+.\objects\main.o: ..\src\device\speak.h
+.\objects\main.o: ..\src\device\BspIapDriver.h
+.\objects\main.o: ..\src\device\watchDog.h

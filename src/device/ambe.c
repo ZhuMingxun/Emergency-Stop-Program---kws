@@ -69,6 +69,8 @@
 char FrameRdData[34];
 char FrameWrData[34];
 
+uint16_t waitcnt=0;
+
 const char SINE_DATA[34]={
 0x13,0xec,0x06,0x00,0x64,0xB0,0xD8,
 0x00,0x20,0x00,0x00,0x00,0x00,0x00,
@@ -227,9 +229,7 @@ char*AMBERdData(void)
 void AMBEWrData(char*pdata)
 {
 	uint8_t i;
-	
-	uint16_t waitcnt=0;
-	
+
 	while (!AMBEGetWrStatus())
 	{
 		if(waitcnt++ > 65530)
@@ -264,7 +264,6 @@ char AMBEGetRdStatus(void)
 void AMBESetSine(void)
 {
   uint8_t i;
-	uint16_t waitcnt=0;
 	
 	while (!AMBEGetWrStatus())
 	{
@@ -312,6 +311,7 @@ void AMBESetGain(void)
 		{
 			timeout=0x50000;
 			AMBEReset();
+            break;
 		}
 		timeout--;
 	}
